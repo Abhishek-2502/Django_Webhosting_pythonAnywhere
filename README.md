@@ -21,11 +21,11 @@ In WSGI configuration file: <br>
 import os <br>
 import sys <br>
 
-path = '/home/AbhishekRajput/django_webhosting/django_webhosting' <br>                            #
+path = '/home/AbhishekRajput/django_webhosting/django_webhosting'                            # <br> 
 if path not in sys.path: <br>
     sys.path.append(path) <br>
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'django_webhosting.settings' <br>                          #
+os.environ['DJANGO_SETTINGS_MODULE'] = 'django_webhosting.settings'                          # <br> 
 
 from django.core.wsgi import get_wsgi_application <br>
 application = get_wsgi_application()
