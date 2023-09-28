@@ -13,25 +13,21 @@ pip install django
   ALLOWED_HOSTS = ['AbhishekRajput.pythonanywhere.com']
   'DIRS': ['/home/AbhishekRajput/django_webhosting/django_webhosting/templates'],
 
-2> IN Code Section:
+2> IN Code Section: <br>
 In WSGI configuration file:
 
-# +++++++++++ DJANGO +++++++++++
-# To use your own django app use code like this:
+ +++++++++++ DJANGO +++++++++++
 import os
 import sys
-#
-## assuming your django settings file is at '/home/AbhishekRajput/mysite/mysite/settings.py'
-## and your manage.py is is at '/home/AbhishekRajput/mysite/manage.py'
+
 path = '/home/AbhishekRajput/django_webhosting/django_webhosting'                             #
 if path not in sys.path:
     sys.path.append(path)
-#
+
 os.environ['DJANGO_SETTINGS_MODULE'] = 'django_webhosting.settings'                           #
-#
-## then:
+
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 
-3> IN Virtualenv Section:
+3> IN Virtualenv Section: <br>
    add 'venv'
