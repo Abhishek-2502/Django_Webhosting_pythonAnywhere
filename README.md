@@ -1,14 +1,14 @@
 # django_webhosting
 # hosted on: https://www.pythonanywhere.com/
 
-# 1.On Bash <br>
+# 1.On Bash 
 git clone https://github.com/Abhishek-2502/django_webhosting <br>
 mkvirtualenv venv <br>
 cd django_webhosting <br>
 cd django_webhosting <br>
 pip install django <br>
 
-# 2. Other <br>
+# 2. Other 
 1>In Settings.py: <br>
   Debug = true <br>
   ALLOWED_HOSTS = ['AbhishekRajput.pythonanywhere.com'] <br>
