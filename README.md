@@ -1,5 +1,5 @@
-# django_webhosting
-# hosted on: https://www.pythonanywhere.com/
+# django webhosting
+# Hosted on: https://www.pythonanywhere.com/
 # Link: https://abhishekrajput.pythonanywhere.com/
 
 # 1.On Bash 
