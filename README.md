@@ -12,6 +12,7 @@ Welcome to the Django Web Hosting guide! This repository provides instructions f
 - [Project Configuration](#project-configuration)
 - [WSGI Configuration](#wsgi-configuration)
 - [Virtual Environment](#virtual-environment)
+- [Author](#author)
 
 ## Getting Started
 
@@ -93,3 +94,7 @@ In your PythonAnywhere account, navigate to the virtual environment section and 
 By following these steps, you will have successfully hosted your Django website on PythonAnywhere.
 
 For any further assistance or issues, please feel free to open an issue or submit a pull request.
+
+## Author
+
+Abhishek Rajput.
