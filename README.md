@@ -23,7 +23,7 @@ Create an account on [PythonAnywhere](https://www.pythonanywhere.com/), then fol
 
 2. **Access Bash on PythonAnywhere**: Once you've created your account, navigate to the PythonAnywhere dashboard and launch a new Bash console to execute the following commands.
 
-3. **Clone the Repository**:
+3. **Clone the Repository**: Change repository link according to your repository
     ```bash
     git clone https://github.com/Abhishek-2502/django_webhosting
     ```
@@ -51,17 +51,17 @@ In your Django project's `settings.py` file which can be accessed through the fi
     DEBUG = True
     ```
 
-2. **Specify Allowed Hosts**:
+2. **Specify Allowed Hosts**: Change user name according to you
     ```python
-    ALLOWED_HOSTS = ['abhishekrajput.pythonanywhere.com']
+    ALLOWED_HOSTS = ['AbhishekRajput.pythonanywhere.com']
     ```
 
-3. **Configure Templates Directory**:
+3. **Configure Templates Directory**: Change path according to your templates folder
     ```python
     TEMPLATES = [
         {
             'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': ['/home/abhishekrajput/django_webhosting/django_webhosting/templates'],
+            'DIRS': ['/home/AbhishekRajput/django_webhosting/django_webhosting/templates'],  
             # Other template settings...
         },
     ]
@@ -77,18 +77,15 @@ In your Django project's WSGI configuration file (`wsgi.py`) which can be access
 import os
 import sys
 
-# add your project directory to the sys.path
-project_home = '/home/abhishekrajput/django_webhosting/django_webhosting'
-if project_home not in sys.path:
-    sys.path.insert(0, project_home)
+path = '/home/AbhishekRajput/django_webhosting/django_webhosting' #Change this path where your manage.py is present
+if path not in sys.path:
+    sys.path.append(path)
 
-# set environment variable to tell django where your settings.py is
-os.environ['DJANGO_SETTINGS_MODULE'] = 'abhishekwebhosting.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'django_webhosting.settings' #Change this path where your settings.py is present
 
-
-# serve django via WSGI
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
+
 ```
 
 ## Virtual Environment
