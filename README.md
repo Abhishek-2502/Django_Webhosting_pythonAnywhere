@@ -2,10 +2,6 @@
 
 Welcome to the Django Web Hosting guide! This repository provides instructions for hosting a Django website on [PythonAnywhere](https://www.pythonanywhere.com/). Follow the steps below to create an account on PythonAnywhere, clone the repository, set up a virtual environment, and configure your Django project.
 
-## About
-
-Create an account on [PythonAnywhere](https://www.pythonanywhere.com/), then follow this guide to host a Django website.
-
 ## Hosted on PythonAnywhere
 
 - **Website Link**: [https://abhishekrajput.pythonanywhere.com/](https://abhishekrajput.pythonanywhere.com/)
