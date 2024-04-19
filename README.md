@@ -31,7 +31,7 @@ Create an account on [PythonAnywhere](https://www.pythonanywhere.com/), then fol
     ```bash
     mkvirtualenv venv
     ```
-5. **Get inside the Folder where manage.py is present (use ls to look content of folder)**:
+5. **Changing path**: Get inside the Folder where manage.py is present (Use ls to look content of folder)
    ```bash
     cd django_webhosting
     cd django_webhosting
@@ -69,7 +69,7 @@ In your Django project's `settings.py` file which can be accessed through the fi
 
 ## WSGI Configuration
 
-In your Django project's WSGI configuration file (`wsgi.py`) which can be accessed through the website in web app, add the following code:
+In your Django project's WSGI configuration file (`wsgi.py`) which can be accessed through the website in web app, uncomment and modify the following code:
 
 ```python
 # +++++++++++ DJANGO +++++++++++
