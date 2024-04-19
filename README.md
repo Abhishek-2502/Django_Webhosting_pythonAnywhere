@@ -1,6 +1,10 @@
 # Django Web Hosting
 
-Welcome to the Django Web Hosting guide! This repository provides instructions for hosting a Django website on [PythonAnywhere](https://www.pythonanywhere.com/). Follow the steps below to clone the repository, set up a virtual environment, and configure your Django project.
+Welcome to the Django Web Hosting guide! This repository provides instructions for hosting a Django website on [PythonAnywhere](https://www.pythonanywhere.com/). Follow the steps below to create an account on PythonAnywhere, clone the repository, set up a virtual environment, and configure your Django project.
+
+## About
+
+Create an account on [PythonAnywhere](https://www.pythonanywhere.com/), then follow this guide to host a Django website.
 
 ## Hosted on PythonAnywhere
 
@@ -15,23 +19,25 @@ Welcome to the Django Web Hosting guide! This repository provides instructions f
 
 ## Getting Started
 
-1. **Clone the Repository**:
+1. **Create an Account on PythonAnywhere**: Sign up for an account on [PythonAnywhere](https://www.pythonanywhere.com/).
+
+2. **Access Bash on PythonAnywhere**: Once you've created your account, navigate to the PythonAnywhere dashboard and launch a new Bash console to execute the following commands.
+
+3. **Clone the Repository**:
     ```bash
     git clone https://github.com/Abhishek-2502/django_webhosting
+    cd django_webhosting
     ```
-
-2. **Create a Virtual Environment**:
+4. **Create a Virtual Environment**:
     ```bash
     mkvirtualenv venv
     ```
-    
-3. **Get Inside the Folder**:
+5. **Get inside the Folder**:
    ```bash
-   cd django_webhosting
-   cd django_webhosting
-   ```
-   
-5. **Install Django**:
+    cd django_webhosting
+    cd django_webhosting
+    ```
+6. **Install Django**:
     ```bash
     pip install django
     ```
