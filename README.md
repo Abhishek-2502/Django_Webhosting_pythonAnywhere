@@ -1,35 +1,91 @@
-# django webhosting
-# Hosted on: https://www.pythonanywhere.com/
-# Link: https://abhishekrajput.pythonanywhere.com/
+# Django Web Hosting
 
-# 1.On Bash 
-git clone https://github.com/Abhishek-2502/django_webhosting <br>
-mkvirtualenv venv <br>
-cd django_webhosting <br>
-cd django_webhosting <br>
-pip install django <br>
+Welcome to the Django Web Hosting guide! This repository provides instructions for hosting a Django website on [PythonAnywhere](https://www.pythonanywhere.com/). Follow the steps below to clone the repository, set up a virtual environment, and configure your Django project.
 
-# 2. Other 
-1>In Settings.py: <br>
-  Debug = true <br>
-  ALLOWED_HOSTS = ['AbhishekRajput.pythonanywhere.com'] <br>
-  'DIRS': ['/home/AbhishekRajput/django_webhosting/django_webhosting/templates'], <br>
+## Hosted on PythonAnywhere
 
-2> IN Code Section: <br>
-In WSGI configuration file: <br>
+- **Website Link**: [https://abhishekrajput.pythonanywhere.com/](https://abhishekrajput.pythonanywhere.com/)
 
- +++++++++++ DJANGO +++++++++++ <br>
-import os <br>
-import sys <br>
+## Table of Contents
 
-path = '/home/AbhishekRajput/django_webhosting/django_webhosting'                            # <br> 
-if path not in sys.path: <br>
-    sys.path.append(path) <br>
+- [Getting Started](#getting-started)
+- [Project Configuration](#project-configuration)
+- [WSGI Configuration](#wsgi-configuration)
+- [Virtual Environment](#virtual-environment)
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'django_webhosting.settings'                          # <br> 
+## Getting Started
 
-from django.core.wsgi import get_wsgi_application <br>
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/Abhishek-2502/django_webhosting
+    ```
+
+2. **Create a Virtual Environment**:
+    ```bash
+    mkvirtualenv venv
+    ```
+    
+3. **Get Inside the Folder**:
+   ```bash
+   cd django_webhosting
+   cd django_webhosting
+   ```
+   
+5. **Install Django**:
+    ```bash
+    pip install django
+    ```
+
+## Project Configuration
+
+In your Django project's `settings.py` file, make the following changes:
+
+1. **Set Debug Mode**:
+    ```python
+    DEBUG = True
+    ```
+
+2. **Specify Allowed Hosts**:
+    ```python
+    ALLOWED_HOSTS = ['abhishekrajput.pythonanywhere.com']
+    ```
+
+3. **Configure Templates Directory**:
+    ```python
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': ['/home/abhishekrajput/django_webhosting/django_webhosting/templates'],
+            # Other template settings...
+        },
+    ]
+    ```
+
+## WSGI Configuration
+
+In your Django project's WSGI configuration file (`wsgi.py`), add the following code:
+
+```python
+# +++++++++++ DJANGO +++++++++++
+import os
+import sys
+
+path = '/home/abhishekrajput/django_webhosting/django_webhosting'
+if path not in sys.path:
+    sys.path.append(path)
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'django_webhosting.settings'
+
+from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
+```
 
-3> IN Virtualenv Section: <br>
-   add 'venv'
+## Virtual Environment
+
+In your PythonAnywhere account, navigate to the virtual environment section and add the virtual environment you created:
+
+- **Add Virtual Environment**: `venv`
+
+By following these steps, you will have successfully hosted your Django website on PythonAnywhere.
+
+For any further assistance or issues, please feel free to open an issue or submit a pull request.
