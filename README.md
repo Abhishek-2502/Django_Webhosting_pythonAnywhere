@@ -40,7 +40,7 @@ Create an account on [PythonAnywhere](https://www.pythonanywhere.com/), then fol
     ```bash
     pip install django
     ```
-7. **Create an web app**: Create an django based web app located on dashboard and name of the app should be same as name of the django project.
+7. **Create an web app**: Create an django based web app located on dashboard and choose manual configuration.
    
 ## Project Configuration
 
