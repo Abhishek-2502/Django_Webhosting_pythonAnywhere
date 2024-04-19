@@ -26,13 +26,12 @@ Create an account on [PythonAnywhere](https://www.pythonanywhere.com/), then fol
 3. **Clone the Repository**:
     ```bash
     git clone https://github.com/Abhishek-2502/django_webhosting
-    cd django_webhosting
     ```
 4. **Create a Virtual Environment**:
     ```bash
     mkvirtualenv venv
     ```
-5. **Get inside the Folder**:
+5. **Get inside the Folder where manage.py is present (use ls to look content of folder)**:
    ```bash
     cd django_webhosting
     cd django_webhosting
@@ -41,10 +40,11 @@ Create an account on [PythonAnywhere](https://www.pythonanywhere.com/), then fol
     ```bash
     pip install django
     ```
-
+7. **Create an web app**: Create an django based web app located on dashboard and name of the app should be same as name of the django project.
+   
 ## Project Configuration
 
-In your Django project's `settings.py` file, make the following changes:
+In your Django project's `settings.py` file which can be accessed through the files in dashboard, make the following changes:
 
 1. **Set Debug Mode**:
     ```python
@@ -69,19 +69,24 @@ In your Django project's `settings.py` file, make the following changes:
 
 ## WSGI Configuration
 
-In your Django project's WSGI configuration file (`wsgi.py`), add the following code:
+In your Django project's WSGI configuration file (`wsgi.py`) which can be accessed through the website in web app, add the following code:
 
 ```python
 # +++++++++++ DJANGO +++++++++++
+
 import os
 import sys
 
-path = '/home/abhishekrajput/django_webhosting/django_webhosting'
-if path not in sys.path:
-    sys.path.append(path)
+# add your project directory to the sys.path
+project_home = '/home/abhishekrajput/django_webhosting/django_webhosting'
+if project_home not in sys.path:
+    sys.path.insert(0, project_home)
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'django_webhosting.settings'
+# set environment variable to tell django where your settings.py is
+os.environ['DJANGO_SETTINGS_MODULE'] = 'abhishekwebhosting.settings'
 
+
+# serve django via WSGI
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 ```
